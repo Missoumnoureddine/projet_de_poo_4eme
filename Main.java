@@ -10,40 +10,40 @@ public class Main {
 
         boolean continueAdding = true;
         while (continueAdding) {
-            System.out.print("Entrez le nom de l'etudiant: ");
+            System.out.print(" le nom : ");
             String nom = scanner.nextLine();
 
-            System.out.print("Entrez le prenom de l'etudiant: ");
+            System.out.print(" le prenom : ");
             String prenom = scanner.nextLine();
 
-            System.out.print("Entrez l'age de l'etudiant: ");
+            System.out.print(" l'age : ");
             int age = scanner.nextInt();
             scanner.nextLine();
 
-            System.out.print("Entrez le sexe de l'etudiant (Homme/Femme): ");
+            System.out.print(" le sexe  (H/F): ");
             String sexe = scanner.nextLine();
-
-            System.out.print("Entrez le matricule de l'etudiant: ");
+            
+            System.out.print(" le matricule : ");
             String matricule = scanner.nextLine();
-
-            System.out.print("Entrez la moyenne du baccalaureat de l'etudiant: ");
-            double bacAverage = scanner.nextDouble();
-            scanner.nextLine(); 
-
+           
+            System.out.print(" la moyenne du bac : ");
+            double bac = scanner.nextDouble();
+           
+             scanner.nextLine();
             Etudiant etudiant;
-            if (bacAverage > 14) {
-                etudiant = new Etudiant_ENSK(nom, prenom, age, sexe, matricule, bacAverage);
+            if (bac > 14) {
+                etudiant = new Etudiant_ENSK(nom, prenom, age, sexe, matricule, bac);
             } else {
-                etudiant = new Etudiant(nom, prenom, age, sexe, matricule, bacAverage);
+                etudiant = new Etudiant(nom, prenom, age, sexe, matricule, bac);
             }
 
             diplome.ajouterEtudiant(etudiant);
 
-            System.out.print("Voulez-vous ajouter un autre etudiant? (oui/non): ");
+            System.out.print(" ajouter un autre etudiant? (oui/non): ");
             String response = scanner.nextLine();
             continueAdding = response.equalsIgnoreCase("oui");
         }
-
-        diplome.afficherInformations();
+         System.out.println("-----------------------------");
+         diplome.afficherInformations();
     }
 }
