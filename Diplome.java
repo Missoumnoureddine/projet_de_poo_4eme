@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Diplome {
     private List<Etudiant> etudiantsList;
-    private static int numberOfStudents = 0;
+    private static int number = 0;
 
     public Diplome() {
         etudiantsList = new ArrayList<>();
@@ -13,7 +13,7 @@ public class Diplome {
 
     public void ajouterEtudiant(Etudiant etudiant) {
         etudiantsList.add(etudiant);
-        numberOfStudents++;
+        number++;
     }
 
     public void afficherInformations() {
@@ -22,7 +22,7 @@ public class Diplome {
             System.out.println("Prenom: " + etudiant.getPrenom());
             System.out.println("Age: " + etudiant.getAge());
             System.out.println("Sexe: " + etudiant.getSexe());
-            System.out.println("Statut Major: " + etudiant.getisMajor());
+            System.out.println("Major ؟: " + etudiant.getisMajor());
             System.out.println("Matricule: " + etudiant.getMatricule());
             System.out.println("Type Etudiant: " + etudiant.getTypeEtudiant());
 
@@ -31,8 +31,6 @@ public class Diplome {
             }
             System.out.println("-----------------------------");
         }
-        System.out.println("Nombre total d'etudiants inscrits: " + numberOfStudents);
+        System.out.println("Nombre  d'etudiants: " + number);
     }
-}
-    
 }
