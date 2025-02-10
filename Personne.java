@@ -12,30 +12,30 @@ public class Personne {
         this.prenom = prenom;
         this.age = age;
         this.sexe = sexe;
-        
+
         if (age >= 18) {
             this.isMajor = "Major";
         } else {
             this.isMajor = "Non Major";
         }
     }
-    
+
     public String getNom() {
         return nom;
     }
-    
+
     public String getPrenom() {
         return prenom;
     }
-    
+
     public int getAge() {
         return age;
     }
-    
+
     public String getSexe() {
         return sexe;
     }
-    
+
     public String getisMajor() {
         return isMajor;
     }
